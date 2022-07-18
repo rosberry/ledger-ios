@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1240"
+   LastUpgradeVersion = "1320"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C63ED7EA67F3DD405FABA36"
-               BuildableName = "Ledger.framework"
-               BlueprintName = "Ledger"
-               ReferencedContainer = "container:Ledger.xcodeproj">
+               BuildableName = "LedgerPayment.framework"
+               BlueprintName = "LedgerPayment"
+               ReferencedContainer = "container:LedgerPayment.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C63ED7EA67F3DD405FABA36"
-            BuildableName = "Ledger.framework"
-            BlueprintName = "Ledger"
-            ReferencedContainer = "container:Ledger.xcodeproj">
+            BuildableName = "LedgerPayment.framework"
+            BlueprintName = "LedgerPayment"
+            ReferencedContainer = "container:LedgerPayment.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

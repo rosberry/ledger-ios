@@ -9,15 +9,16 @@ public final class Product: CustomStringConvertible {
     public let identifier: String
     public let title: String
     public let info: String
-    public let price: String?
+    public let price: String
+    public let period: SKProductSubscriptionPeriod.Period
+
+    public let introductoryOffer: IntroductoryOffer?
 
     public let rawPrice: NSDecimalNumber
     public let locale: Locale
 
-    public let subscriptionPeriod: SKProductSubscriptionPeriod?
-
     public var description: String {
-        return "\(identifier) [\(price ?? "N/A")]"
+        return "\(identifier) [\(price)] with period \(period.description())"
     }
 
     let storeProduct: SKProduct
@@ -27,12 +28,14 @@ public final class Product: CustomStringConvertible {
         identifier = storeProduct.productIdentifier
         title = storeProduct.localizedTitle
         info = storeProduct.localizedDescription
-        price = storeProduct.localizedPrice
+        price = storeProduct.localizedPrice ?? "N/A"
+
+        introductoryOffer = .init(storeProduct)
 
         rawPrice = storeProduct.price
         locale = storeProduct.priceLocale
 
-        subscriptionPeriod = storeProduct.subscriptionPeriod
+        period = storeProduct.subscriptionPeriod?.period ?? .unknown
     }
 }
 

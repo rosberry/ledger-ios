@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import Ledger
+import LedgerPayment
 
 typealias LaunchOptions = [UIApplication.LaunchOptionsKey: Any]
 

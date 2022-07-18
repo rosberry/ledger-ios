@@ -24,19 +24,19 @@ public struct PurchaseInfo: Codable {
 
     init(product: Product) {
         identifier = product.identifier
-        if let subscriptionPeriod = product.subscriptionPeriod {
+        if product.period.numberOfUnits != nil {
             type = .subscription
             var dateComponents: DateComponents = .init()
-            switch subscriptionPeriod.unit {
-            case .day:
-                dateComponents.day = subscriptionPeriod.numberOfUnits
-            case .week:
-                dateComponents.weekOfYear = subscriptionPeriod.numberOfUnits
-            case .month:
-                dateComponents.month = subscriptionPeriod.numberOfUnits
-            case .year:
-                dateComponents.year = subscriptionPeriod.numberOfUnits
-            @unknown default:
+            switch product.period {
+            case let .day(count):
+                dateComponents.day = count
+            case let .week(count):
+                dateComponents.weekOfYear = count
+            case let .month(count):
+                dateComponents.month = count
+            case let .year(count):
+                dateComponents.year = count
+            case .unknown:
                 break
             }
             expirationDate = Calendar.current.date(byAdding: dateComponents, to: Date()) ?? .init()

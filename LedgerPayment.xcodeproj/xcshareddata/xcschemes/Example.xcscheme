@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FABCC282AA229324E31A3D7E"
                BuildableName = "Example.app"
                BlueprintName = "Example"
-               ReferencedContainer = "container:Ledger.xcodeproj">
+               ReferencedContainer = "container:LedgerPayment.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "FABCC282AA229324E31A3D7E"
             BuildableName = "Example.app"
             BlueprintName = "Example"
-            ReferencedContainer = "container:Ledger.xcodeproj">
+            ReferencedContainer = "container:LedgerPayment.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "FABCC282AA229324E31A3D7E"
             BuildableName = "Example.app"
             BlueprintName = "Example"
-            ReferencedContainer = "container:Ledger.xcodeproj">
+            ReferencedContainer = "container:LedgerPayment.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
